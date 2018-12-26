@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+echo "Enter the name of the table to be deleted"
+read tname
+if test -d $tname
+then
+	rm -r $dpath/$tname
+else
+	echo "table is not created"
+fi

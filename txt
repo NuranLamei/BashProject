@@ -1,0 +1,34 @@
+:'
+while true 
+do
+	echo "Enter DB name you wanna create: "
+	CreateDB
+	c=$?	
+	if test $c -eq 1
+	then
+		echo "DB created succesfully"
+		break
+	
+	elif test $c -eq 0
+	then
+		echo "File already exists"
+		continue
+	fi
+done
+
+while true 
+do
+	echo "Enter DB name you wanna delete: "
+	DeleteDB
+	d=$?
+	if test $d -eq 1
+	then
+		echo "DB deleted succesfully"
+		break
+	
+	elif test $d -eq 0
+	then
+		echo "DB is not found"
+		continue
+	fi
+done '
